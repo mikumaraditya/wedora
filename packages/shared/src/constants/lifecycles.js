@@ -1,0 +1,12 @@
+export const WEDDING_LIFECYCLE = Object.freeze({
+  ACTIVE: 'ACTIVE',
+  COMPLETED: 'COMPLETED',
+  ARCHIVED: 'ARCHIVED',
+});
+
+export const LIFECYCLE_ACTIONS = Object.freeze({
+  COMPLETE: 'COMPLETE',
+  REOPEN: 'REOPEN',
+  ARCHIVE: 'ARCHIVE',
+  RESTORE: 'RESTORE',
+});

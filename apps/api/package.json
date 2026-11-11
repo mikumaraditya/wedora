@@ -1,0 +1,39 @@
+{
+  "name": "@wedora/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "worker": "node --watch src/worker.js",
+    "start": "node src/server.js",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@wedora/shared": "*",
+    "bcrypt": "^5.1.1",
+    "bullmq": "^6.7.4",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^7.5.0",
+    "google-auth-library": "^9.15.1",
+    "helmet": "^8.0.0",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.12.1",
+    "nodemailer": "^6.10.0",
+    "pino": "^10.4.0",
+    "pino-http": "^11.0.0",
+    "resend": "^4.1.2",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "pino-pretty": "^13.0.0",
+    "supertest": "^7.0.0"
+  }
+}

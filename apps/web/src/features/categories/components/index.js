@@ -1,0 +1,2 @@
+// categories components placeholder
+export {};

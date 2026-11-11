@@ -1,0 +1,2 @@
+// galleries components placeholder
+export {};

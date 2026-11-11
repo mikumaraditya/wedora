@@ -1,0 +1,5 @@
+# Treat PDF documentation as binary
+*.pdf binary
+
+# Default line endings
+* text=auto eol=lf

@@ -1,0 +1,2 @@
+// weddings components placeholder
+export {};

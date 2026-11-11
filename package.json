@@ -1,0 +1,37 @@
+{
+  "name": "wedora-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Wedora - Modern Indian Wedding Management Platform",
+  "engines": {
+    "node": ">=22.14.0 <27.0.0",
+    "npm": ">=10.9.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"WEB,API\" -c \"cyan,magenta\" \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm run dev --workspace=@wedora/web",
+    "dev:api": "npm run dev --workspace=@wedora/api",
+    "dev:infra": "docker compose -f infra/docker-compose.dev.yml up -d",
+    "dev:infra:down": "docker compose -f infra/docker-compose.dev.yml down",
+    "dev:worker": "npm run worker --workspace=@wedora/api",
+    "dev:all": "docker compose -f infra/docker-compose.dev.yml up -d --wait && concurrently -n \"WEB,API,WORKER\" -c \"cyan,magenta,yellow\" \"npm run dev:web\" \"npm run dev:api\" \"npm run dev:worker\"",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md,css}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run test:e2e --workspace=@wedora/web --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "prettier": "^3.5.3",
+    "vitest": "^5.1.0"
+  }
+}

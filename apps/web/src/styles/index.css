@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-wedora-ivory: #f8f5ef;
+  --color-wedora-white: #ffffff;
+  --color-wedora-champagne: #e8ddcb;
+  --color-wedora-charcoal: #34302b;
+  --color-wedora-gold: #c4a77d;
+
+  --font-heading: 'EB Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+:root {
+  --background: #f8f5ef;
+  --foreground: #34302b;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-wedora-ivory);
+  color: var(--color-wedora-charcoal);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}

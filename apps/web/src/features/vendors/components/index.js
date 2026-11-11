@@ -1,0 +1,2 @@
+// vendors components placeholder
+export {};
